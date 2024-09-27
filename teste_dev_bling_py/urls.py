@@ -1,3 +1,4 @@
+# cspell:disable
 """
 URL configuration for teste_dev_bling_py project.
 

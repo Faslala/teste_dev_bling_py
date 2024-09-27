@@ -1,3 +1,4 @@
+# cspell:disable
 """
 Django settings for teste_dev_bling_py project.
 
@@ -11,6 +12,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
+
+# importando e configurando as variáveis de ambiente do .env
+BLING_CLIENT_ID = config('BLING_CLIENT_ID')
+BLING_CLIENT_SECRET = config('BLING_CLIENT_SECRET')
+BLING_REDIRECT_URI = config('BLING_REDIRECT_URI')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'api',
 ]
 
 MIDDLEWARE = [
