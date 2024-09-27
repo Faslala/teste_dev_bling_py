@@ -1,4 +1,5 @@
 # cspell:disable
+# pylint: disable=no-member
 '''TBD'''
 from django.shortcuts import redirect, HttpResponse
 from decouple import config
